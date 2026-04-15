@@ -12,61 +12,51 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 body {
-    background: linear-gradient(180deg, #e8e6df, #cfc8bb);
+    /* 水滴质感毛玻璃背景 */
+    background: linear-gradient(135deg, #67e8f9, #bae6fd, #e0f2fe);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-/* 主容器 */
+/* 主容器 - 毛玻璃效果 */
 .container {
     width: 360px;
-    background: #f3efe6;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
-/* 顶部背景图（已改为你的卡通火箭图） */
+/* 顶部背景图（卡通火箭图） */
 .header {
     height: 280px;
     background: url('./Lhbf7.jpg') center/cover no-repeat;
 }
-/* 名字 */
-.name {
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-    color: #333;
-    margin-top: -20px;   /* 让名字更贴近背景图 */
-}
-/* 副标题 */
-.desc {
-    text-align: center;
-    color: #777;
-    margin-top: 6px;
-    margin-bottom: 30px;
-}
 /* 按钮区 */
 .links {
-    padding: 0 20px 30px;
+    padding: 20px 20px 30px;
 }
 /* 按钮 */
 .link {
     display: block;
-    background: #e9e4d8;
-    margin-bottom: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    margin-bottom: 14px;
     padding: 16px;
     border-radius: 14px;
     text-decoration: none;
-    color: #333;
+    color: #1f2937;
     text-align: center;
     font-size: 16px;
-    transition: 0.2s;
+    transition: all 0.3s ease;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 .link:hover {
-    background: #ddd6c8;
-    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
 }
 /* 弹窗 */
 .modal {
@@ -76,23 +66,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.65);
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 .modal img {
     width: 280px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 </style>
 </head>
 <body>
 <div class="container">
     <div class="header"></div>
-    <div class="name">雷昂 / Leon</div>
-    <div class="desc">喜欢分析 | 喜欢分享</div>
+    
     <div class="links">
         <!-- X -->
         <a class="link" href="https://x.com/sanyeer3" target="_blank">
@@ -113,7 +102,7 @@ body {
     </div>
 </div>
 
-<!-- 弹窗 - 已改为正确二维码 -->
+<!-- 弹窗 - 二维码 -->
 <div class="modal" id="modal" onclick="if(event.target.id === 'modal') closeModal();">
     <img src="./IMG_7833.JPG" onclick="event.stopImmediatePropagation()">
 </div>
