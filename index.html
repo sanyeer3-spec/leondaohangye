@@ -26,19 +26,10 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-/* 顶部背景图（已替换为你上传的 IMG_7833.JPG） */
+/* 顶部背景图（已改为你的卡通火箭图） */
 .header {
-    height: 240px;
-    background: url('./IMG_7833.JPG') center/cover no-repeat;
-}
-/* 头像（你目前还没有上传头像文件，建议再传一张正方形头像并改名为 avatar.jpg） */
-.avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid #f3efe6;
-    margin: -50px auto 10px;
-    background: url('./avatar.jpg') center/cover; /* ← 如果你已有头像文件，请把 avatar.jpg 改成实际文件名 */
+    height: 280px;
+    background: url('./Lhbf7.jpg') center/cover no-repeat;
 }
 /* 名字 */
 .name {
@@ -46,13 +37,14 @@ body {
     font-size: 26px;
     font-weight: bold;
     color: #333;
+    margin-top: -20px;   /* 让名字更贴近背景图 */
 }
 /* 副标题 */
 .desc {
     text-align: center;
     color: #777;
     margin-top: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 /* 按钮区 */
 .links {
@@ -99,7 +91,6 @@ body {
 <body>
 <div class="container">
     <div class="header"></div>
-    <div class="avatar"></div>
     <div class="name">雷昂 / Leon</div>
     <div class="desc">喜欢分析 | 喜欢分享</div>
     <div class="links">
@@ -115,16 +106,16 @@ body {
         <a class="link" href="https://t.me/sanyeer3" target="_blank">
             电报
         </a>
-        <!-- 币安USDC（弹出图片） -->
+        <!-- 币安USDC（弹出二维码） -->
         <div class="link" onclick="openModal()">
             币安 / USDC
         </div>
     </div>
 </div>
 
-<!-- 弹窗 - 已替换为你的 Lhbf7.jpg -->
+<!-- 弹窗 - 已改为正确二维码 -->
 <div class="modal" id="modal" onclick="if(event.target.id === 'modal') closeModal();">
-    <img src="./Lhbf7.jpg" onclick="event.stopImmediatePropagation()">
+    <img src="./IMG_7833.JPG" onclick="event.stopImmediatePropagation()">
 </div>
 
 <script>
